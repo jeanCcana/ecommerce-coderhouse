@@ -30,14 +30,19 @@ function Detail() {
               <span className="block">S/.1000</span>
             </div>
             <div>
-              <span className="py-1 px-2 rounded-md bg-black text-white text-sm">
+              <span className="py-1 px-3 rounded-md bg-black text-white text-xs">
                 Nuevo
               </span>
             </div>
           </div>
         </div>
         <div className="px-7 pt-8">
-          <span>Tamaño-Hombres</span>
+          <div className="flex justify-between items-baseline">
+            <span>Tamaño-Hombres (us)</span>
+            <span className="text-gray-400 underline italic text-sm">
+              Ver gráfico
+            </span>
+          </div>
           <div className="flex gap-4 mt-4 mb-8 justify-center">
             {[38, 39, 40, 41, 42, 43].map((size) => (
               <span className="px-3 py-2  border rounded-md ">{size}</span>
@@ -50,6 +55,15 @@ function Detail() {
             expedita asperiores libero tempora dolorem eius quasi deleniti,
             molestiae nemo quos!
           </p>
+          <div className="flex gap-4 py-10">
+            <FontAwesomeIcon
+              icon={faHeart}
+              className=" text-red-600 p-3 bg-white shadow-md rounded-md text-xl"
+            />
+            <button className="flex-1 bg-black text-white shadow-md rounded-md">
+              Comprar Ahora
+            </button>
+          </div>
         </div>
       </div>
     </div>
