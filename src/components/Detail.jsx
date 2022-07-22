@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import sneaker from "../assets/snkr1.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,6 +8,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Detail() {
+  const [isfavorite, setIsFavorite] = useState(true);
+  const [size, setSize] = useState(40);
+
   return (
     <div className="flex h-screen h-screen-ios flex-col bg-[#FAFAFA]">
       <div className="flex justify-between m-6">
@@ -44,8 +47,15 @@ function Detail() {
             </span>
           </div>
           <div className="flex gap-4 mt-4 mb-8 justify-center">
-            {[38, 39, 40, 41, 42, 43].map((size) => (
-              <span className="px-3 py-2  border rounded-md ">{size}</span>
+            {[38, 39, 40, 41, 42, 43].map((value) => (
+              <span
+                onClick={() => setSize(value)}
+                className={`cursor-pointer px-3 py-2 border rounded-md ${
+                  size === value && "bg-black text-white"
+                }`}
+              >
+                {value}
+              </span>
             ))}
           </div>
           <span className="mb-2 block font-semibold">Descripción</span>
@@ -58,7 +68,10 @@ function Detail() {
           <div className="flex gap-4 py-10">
             <FontAwesomeIcon
               icon={faHeart}
-              className=" text-red-600 p-3 bg-white shadow-md rounded-md text-xl"
+              onClick={() => setIsFavorite(!isfavorite)}
+              className={`cursor-pointer p-3 bg-white shadow-md rounded-md text-xl ${
+                isfavorite ? "text-red-500" : "text-gray-400"
+              }`}
             />
             <button className="flex-1 bg-black text-white shadow-md rounded-md">
               Comprar Ahora

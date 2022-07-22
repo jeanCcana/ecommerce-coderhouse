@@ -7,7 +7,7 @@ import NavBar from "./NavBar";
 
 function Home() {
   return (
-    <div className="flex h-screen h-screen-ios flex-col bg-[#FAFAFA]">
+    <div className="flex absolute inset-0 flex-col bg-[#FAFAFA]">
       <div className="flex justify-center m-6">
         <img src={Logo} className="w-[4.5rem]" />
       </div>
