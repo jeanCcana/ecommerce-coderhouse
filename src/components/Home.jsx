@@ -3,11 +3,10 @@ import Logo from "../assets/snkr_logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import CardItem from "./CardItem";
-import NavBar from "./NavBar";
 
 function Home() {
   return (
-    <div className="flex absolute inset-0 flex-col bg-[#FAFAFA]">
+    <div className="flex flex-col max-h-full">
       <div className="flex justify-center m-6">
         <img src={Logo} className="w-[4.5rem]" />
       </div>
@@ -26,7 +25,6 @@ function Home() {
           ))}
         </div>
       </div>
-      <NavBar />
     </div>
   );
 }

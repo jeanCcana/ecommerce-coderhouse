@@ -12,7 +12,7 @@ function Detail() {
   const [size, setSize] = useState(40);
 
   return (
-    <div className="flex h-screen h-screen-ios flex-col bg-[#FAFAFA]">
+    <div className="flex flex-col max-h-full">
       <div className="flex justify-between m-6">
         <FontAwesomeIcon icon={faArrowLeft} className="text-xl" />
         <h1 className="text-lg font-semibold uppercase">Detalle</h1>
